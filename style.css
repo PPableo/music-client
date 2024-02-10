@@ -69,47 +69,58 @@ video {
   display: block;
 }
 
-header .wrapper {
+header {
   position: sticky;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 7%;
+  top: 0;
+  z-index: 1000; /* Ensure it stays on top of other content */
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
 
-  nav {
-    font-size: clamp(0.8rem, 1.8vw, 2rem);
-    ul {
-      display: flex;
-      justify-content: space-evenly;
-      list-style: none;
-      gap: 1.2rem;
-      padding: 0px;
-      li {
-        a {
-          color: inherit;
-          text-decoration: none;
-          font-weight: bolder;
-          position: relative;
-
-          &::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--primary);
-            transition: width 0.2s ease-in-out;
-          }
-
-          &:hover::after {
-            width: 100%;
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 7%;
+  
+    nav {
+      position: sticky;
+      font-size: clamp(0.8rem, 1.8vw, 2rem);
+      ul {
+        display: flex;
+        justify-content: space-evenly;
+        list-style: none;
+        gap: 1.2rem;
+        padding: 0px;
+        li {
+          a {
+            color: inherit;
+            text-decoration: none;
+            font-weight: bolder;
+            position: relative;
+  
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 0;
+              height: 2px;
+              background-color: var(--primary);
+              transition: width 0.2s ease-in-out;
+            }
+  
+            &:hover::after {
+              width: 100%;
+            }
           }
         }
       }
     }
   }
-}
+} 
 
 body {
   header {
