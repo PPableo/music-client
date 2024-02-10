@@ -4,7 +4,8 @@
   --primary: #fcfaf8;
   --secondary: #333333;
   --h1-fluid: clamp(2rem, 2.8rem, 3rem);
-  --background-grey: #f2f2f2;
+  --h2-fluid: clamp(1.5rem, 2.3rem, 2.8rem);
+  --p-fluid: clamp(1.4rem, 1.6rem, 1.8rem);
   --background-white: #fcfaf8;
   --accent-color: #14cf93;
   --border-color: #adadad;
@@ -41,10 +42,14 @@ html {
     font-size: var(--h1-fluid)
   }
   h2 {
-    font-size: clamp(1.5rem, 2.3rem, 32.8rem);
+    font-size: var(--h2-fluid);
   }
   p {
-    font-size: clamp(1.4rem, 1.6rem, 1.8rem);
+    font-size: var(--p-fluid);
+  }
+
+  body {
+    /* background-image: url(./assets/01\ -\ Sunset\ on\ Venus.png); */
   }
 }
 
@@ -211,29 +216,3 @@ body {
     text-align: center;
   }
 }
-
-/* .row3 {
-
-  ul {
-    padding: 0 2%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  li {
-    flex: 1 0 17%;
-  columns grow equally and don't shrink below 17% on smaller screens, maintaining even distribution.
-    max-height: 20%;
-    text-align: center;
-    list-style: none;
-
-      img {
-        overflow: hidden;
-        display:block;
-        width:100%;
-      }
-  }
-} */
