@@ -26,8 +26,9 @@ html { box-sizing: border-box;}
 
 .wrapper {
   max-width: 1200px;
-  width: 88%;
+  width: 90%;
   margin: 0 auto;
+  /* Creating a constraint to keep content in the middle after a certain width */
 }
 
 html {
@@ -54,7 +55,7 @@ html {
   }
 
   body {
-    background-image: url(./assets/image3.png);
+    background-image: url(./assets/image3.webp);
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -72,9 +73,10 @@ video {
 header {
   position: sticky;
   top: 0;
-  z-index: 1000; /* Ensure it stays on top of other content */
+  z-index: 1000;
+  /* Ensure it stays on top of other content */
   background: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(5.5px);
   -webkit-backdrop-filter: blur(5.5px);
   border: 1px solid rgba(255, 255, 255, 0.22);
@@ -84,9 +86,8 @@ header {
     align-items: center;
     justify-content: space-between;
     height: 7%;
-  
+
     nav {
-      position: sticky;
       font-size: clamp(0.8rem, 1.8vw, 2rem);
       ul {
         display: flex;
@@ -100,7 +101,7 @@ header {
             text-decoration: none;
             font-weight: bolder;
             position: relative;
-  
+
             &::after {
               content: "";
               position: absolute;
@@ -111,7 +112,7 @@ header {
               background-color: var(--primary);
               transition: width 0.2s ease-in-out;
             }
-  
+
             &:hover::after {
               width: 100%;
             }
@@ -120,7 +121,12 @@ header {
       }
     }
   }
-} 
+}
+
+main {
+  height: 100%;
+  position: relative;
+}
 
 body {
   header {
@@ -166,7 +172,6 @@ body {
     }
 
     @media (width <= 767px) {
-
       .row,
       .row2 {
         display: flex;
@@ -197,19 +202,18 @@ body {
     }
 
     @media (width < 380px) {
-
       h1,
       h2 {
         font-size: 1.5rem;
       }
-      
+
       p {
         font-size: 1rem;
       }
 
       .card {
         width: 50%;
-        }
+      }
     }
   }
 
@@ -228,6 +232,7 @@ body {
       transform: scale(1.05);
       color: var(--secondary);
       background-color: var(--primary);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
     }
     img {
       border-radius: 1.6rem;
@@ -258,11 +263,17 @@ body {
       display: block;
       max-width: 100%;
     }
+
+    @media (width < 380px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
   }
 
   footer {
     font-size: clamp(1.2rem, 1.4rem, 1.6rem);
-    height: 7%;
+    min-height: 7%;
     padding: 1vh;
     text-align: center;
   }
