@@ -181,6 +181,11 @@ body {
         scroll-behavior: smooth;
       }
 
+      .row::-webkit-scrollbar,
+.row2::-webkit-scrollbar {
+  display: none;
+}
+
       figure {
         display: block;
       }

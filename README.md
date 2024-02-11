@@ -133,7 +133,7 @@ I first took the initial layout and planned my direction by sectioning and divid
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [Readme-Template]: https://github.com/othneildrew/Best-README-Template
-[Artists-and-Songs]: [youtube.com](https://www.youtube.com/)
+[Artists-and-Songs]: https://www.youtube.com/
 [Professor-GabA]: https://github.com/GAlbuHumber
 [contributors-shield]: https://img.shields.io/github/contributors/PaulPableoSectionC/lab5_Music_Themed_website.svg?style=for-the-badge
 [contributors-url]: https://github.com/PaulPableoSectionC/lab5_Music_Themed_website/graphs/contributors
